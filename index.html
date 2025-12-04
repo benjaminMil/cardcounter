@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="top">
+        <button id="new-deck">New Deck</button>
+        <p id="remaining"></p>
+      </div>
+      <div>
+        <button id="one-deck">1 Deck</button>
+        <button id="three-decks">3 Deck</button>
+        <button id="six-decks">6 Deck</button>
+      </div>
+    </div>
+
+    <h1 id="header">Card Count Trainer</h1>
+    <div class="count">
+      <button id="reveal-count">Reveal Count</button>
+      <h2 id="count-text">Count: 0</h2>
+    </div>
+    <div id="cards">
+      <div class="card-slot">
+        <img
+          class="card"
+          src="./img/backOfCard.svg"
+          alt="back of the playing card"
+        />
+      </div>
+    </div>
+    <div id="guess-btns">
+      <p>Next Card should be...</p>
+      <button id="low">Low Card</button>
+      <button id="high">High Card</button>
+    </div>
+    <button id="draw-cards" class="draw">Draw</button>
+    <script src="index.js"></script>
+  </body>
+</html>

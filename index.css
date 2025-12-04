@@ -1,0 +1,141 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a181b;
+  font-family: "Exo 2", sans-serif;
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.header {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.header button {
+  padding: 0.25rem;
+}
+
+button {
+  background-color: #fff100;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #ffdc00;
+}
+button#new-deck {
+  align-self: flex-start;
+  padding: 5px;
+}
+
+button.draw {
+  font-size: 1.2rem;
+  padding: 1.25rem 4rem;
+  margin-bottom: 3rem;
+  border-radius: 8px;
+}
+
+div.card-slot {
+  height: 40vh;
+  min-height: 200px;
+  width: calc(40vh * 5 / 7);
+
+  /* NEW: This acts as the "Frame". It cuts off the white space we push out. */
+  overflow: hidden;
+
+  /* NEW: Since we are cutting off the image, we need to round the corners of the div */
+  border-radius: 12px;
+
+  /* NEW: Optional, adds a shadow to make it pop like a real card 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
+}
+
+div.card-slot:nth-of-type(1) {
+  margin-bottom: 10px;
+}
+
+img.card {
+  width: 100%;
+  height: 100%;
+
+  /* NEW: This zooms the image in by 15%. 
+     Adjust 1.15 up or down if the card is too big or still has white space. */
+  transform: scale(3);
+
+  /* NEW: Ensures the zoom happens from the center outward */
+  transform-origin: center;
+}
+
+div.top {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+}
+
+div.top > p {
+  margin: 0;
+  margin-left: 10px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+h2 {
+  margin: 10px;
+}
+
+#count-text {
+  visibility: hidden;
+}
+
+#reveal-count,
+#high,
+#low {
+  font-size: 1.1rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+}
+
+#low {
+  background-color: #00abe9;
+  margin-right: 0.5rem;
+}
+
+#low:hover {
+  color: white;
+  background-color: #0098d0;
+}
+
+#high {
+  background-color: #e93e00;
+  margin-left: 0.5rem;
+}
+
+#high:hover {
+  color: white;
+  background-color: #d03700;
+}
+
+.count {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#guess-btns {
+  visibility: hidden;
+  text-align: center;
+}
